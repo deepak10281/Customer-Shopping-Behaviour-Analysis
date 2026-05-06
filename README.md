@@ -385,6 +385,6 @@ If you found this project useful:
 
 # 📌 Project References
 
-- Project overview and business objectives documented in uploaded reports :contentReference[oaicite:0]{index=0}
-- Business questions and analytical objectives defined in project problem statement :contentReference[oaicite:1]{index=1}
-- Complete EDA, SQL analysis, customer segmentation, and dashboard insights included in final report :contentReference[oaicite:2]{index=2}
+- Project overview and business objectives documented in uploaded reports 
+- Business questions and analytical objectives defined in project problem statement 
+- Complete EDA, SQL analysis, customer segmentation, and dashboard insights included in final report 
