@@ -1,55 +1,72 @@
-# Retail Customer Analytics — Power BI Dashboard
+# Retail Customer Behaviour Analysis
 
-> End-to-end customer behaviour analysis across 5,000+ transactions | Python · SQL · Power BI
+> End-to-end retail analytics across 5,000+ customer transactions | Revenue insights, segmentation & interactive dashboard | Python · SQL · Power BI
+
+[![Python](https://img.shields.io/badge/Python-3.x-blue?style=flat-square&logo=python)](https://python.org)
+[![PowerBI](https://img.shields.io/badge/Power%20BI-Dashboard-yellow?style=flat-square&logo=powerbi)](https://powerbi.microsoft.com)
+[![SQL](https://img.shields.io/badge/SQL-MySQL-blue?style=flat-square&logo=mysql)](https://mysql.com)
 
 ---
 
 ## Business objective
 
-A retail company needed to understand customer purchasing patterns to increase revenue, improve retention, and optimise marketing campaigns.
+A retail company needed to understand customer purchasing behaviour to increase revenue, improve retention, and optimise marketing campaigns across product categories and customer segments.
 
-**Key questions answered:**
-- Which customer segments generate the most revenue?
+**Key business questions answered:**
+- Which categories and products drive the most revenue?
 - Do discounts actually increase purchase value?
-- Which age groups and categories drive growth?
+- Who are the most valuable customer segments?
+- Which age groups and seasons generate the highest revenue?
+- Do subscribers spend more than non-subscribers?
 
 ---
 
 ## Dashboard preview
 
+![Customer Behaviour Dashboard - Overview](./dashboard-overview.png)
 
-![Dashboard](./customer-dashboard-main.png)
+![Customer Behaviour Dashboard - Details](./dashboard-details.png)
 
 ---
 
 ## Key insights
 
-| Finding | Impact |
-|---|---|
-| Electronics generated $486K — highest of all categories | Priority investment area |
-| Discounted purchases averaged $219 vs $182 without discount | Discount strategy is ROI-positive |
-| Subscribers spend ~63% more than non-subscribers | Grow subscription programme |
-| Customers aged 51+ contributed highest revenue share | Target high-value segment |
-| 3,085 loyal customers drive majority of repeat purchases | Retention > acquisition |
+| Finding | Metric | Business impact |
+|---|---|---|
+| Electronics dominate revenue | $486K — highest category | Priority marketing & inventory focus |
+| Discounts increase spend | $219 avg (discount) vs $182 (no discount) | Discount strategy is ROI-positive |
+| Subscribers spend far more | ~63% more than non-subscribers | Scale subscription programme |
+| Age 51+ drives highest revenue | Top revenue age group | Target high-value demographic |
+| Loyal customers drive repeat sales | 3,085 of 5,000 customers | Retention over acquisition |
+| Spring = peak revenue season | Highest seasonal revenue | Align campaigns to spring |
 
 ---
 
-## Tech stack
+## Revenue breakdown
 
-| Tool | Purpose |
+| Category | Revenue |
 |---|---|
-| Python (Pandas, NumPy, Matplotlib, Seaborn) | Data cleaning & EDA |
-| SQL (MySQL) | Business query analysis |
-| Power BI | Interactive dashboard |
-| Jupyter Notebook | Analysis workflow |
+| Electronics | $486K |
+| Accessories | $194K |
+| Clothing | $183K |
+| Footwear | $111K |
+| Outerwear | $18K |
+
+| Gender | Revenue |
+|---|---|
+| Male | $391K |
+| Female | $352K |
+| Other | $251K |
 
 ---
 
-## Project workflow
+## Customer segmentation
 
-```
-Raw data → Python cleaning → EDA → SQL analysis → Power BI dashboard → Business insights
-```
+| Segment | Count |
+|---|---|
+| Loyal customers | 3,085 |
+| Returning customers | 1,354 |
+| New customers | 561 |
 
 ---
 
@@ -60,7 +77,56 @@ Raw data → Python cleaning → EDA → SQL analysis → Power BI dashboard →
 | Domain | Retail / E-commerce |
 | Records | 5,000+ customers |
 | Features | 18 (numerical + categorical) |
-| Key fields | Purchase amount, category, age, season, discount, subscription |
+| Key fields | Purchase amount, category, age, gender, season, discount, subscription, payment method |
+
+---
+
+## Tech stack
+
+| Tool | Purpose |
+|---|---|
+| Python (Pandas, NumPy) | Data cleaning & preprocessing |
+| Matplotlib / Seaborn | EDA visualisation |
+| SQL (MySQL) | Business query analysis |
+| Power BI | Interactive dashboard |
+| Jupyter Notebook | Analysis workflow |
+
+---
+
+## Data cleaning highlights
+
+- Missing size values imputed by category logic (Electronics/Accessories → "Not Applicable", Footwear → "Free Size", Clothing → mode)
+- Review ratings filled using product-level mean imputation
+- Missing purchase amounts replaced with column mean
+- Column names standardised (lowercase, underscores)
+- Duplicate records removed
+- Cleaned dataset exported to SQL-friendly schema
+
+---
+
+## SQL business analysis — questions solved
+
+- Which category generates the highest revenue?
+- Which products are bestsellers by volume and value?
+- Who are loyal vs returning vs new customers?
+- Which age group contributes the most revenue?
+- Do discounts increase average purchase value?
+- Do subscribed customers spend more?
+- Which shipping type correlates with higher spend?
+- What are the seasonal revenue trends?
+
+---
+
+## Project workflow
+
+```
+Raw data (customer_shopping_behavior.csv)
+  → Python: data cleaning & EDA
+  → Cleaned data (cleaned_customer_data.csv)
+  → SQL: business analysis (BUSINESS_INSIGHTS.sql)
+  → Power BI: interactive dashboard
+  → Business insights & recommendations
+```
 
 ---
 
@@ -69,7 +135,7 @@ Raw data → Python cleaning → EDA → SQL analysis → Power BI dashboard →
 ```bash
 git clone https://github.com/deepak10281/Customer-Shopping-Behaviour-Analysis.git
 pip install pandas numpy matplotlib seaborn sqlalchemy pymysql
-jupyter notebook
+jupyter notebook Customer_Behaviour_Analysis.ipynb
 ```
 
 Import `cleaned_customer_data.csv` into MySQL and run `BUSINESS_INSIGHTS.sql`.  
@@ -77,13 +143,18 @@ Open `Customer_behaviour_analysis.pbix` in Power BI Desktop.
 
 ---
 
-## Customer segmentation results
+## Files in this repo
 
-| Segment | Count |
+| File | Description |
 |---|---|
-| Loyal customers | 3,085 |
-| Returning customers | 1,354 |
-| New customers | 561 |
+| `Customer_Behaviour_Analysis.ipynb` | Python EDA & data cleaning notebook |
+| `BUSINESS_INSIGHTS.sql` | SQL business analysis queries |
+| `Customer_behaviour_analysis.pbix` | Power BI dashboard file |
+| `customer_shopping_behavior.csv` | Raw dataset |
+| `cleaned_customer_data.csv` | Cleaned dataset |
+| `dashboard-overview.png` | Dashboard screenshot — overview page |
+| `dashboard-details.png` | Dashboard screenshot — details page |
+| `Report.pdf` | Full project report |
 
 ---
 
