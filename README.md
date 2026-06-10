@@ -2,7 +2,7 @@
 
 > End-to-end retail analytics across 5,000+ customer transactions | Revenue insights, segmentation & interactive dashboard | Python · SQL · Power BI
 
-![Customer_behaviour_analysis_Dashboard](https://github.com/user-attachments/assets/72449352-902b-443f-acf9-03b463785fb2)
+
 
 
 ---
@@ -20,11 +20,7 @@ A retail company needed to understand customer purchasing behaviour to increase 
 
 ---
 
-## Dashboard preview
 
-![Customer Behaviour Dashboard - Overview](./dashboard-overview.png)
-
-![Customer Behaviour Dashboard - Details](./dashboard-details.png)
 
 ---
 
