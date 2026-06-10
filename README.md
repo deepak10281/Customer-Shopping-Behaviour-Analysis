@@ -2,9 +2,8 @@
 
 > End-to-end retail analytics across 5,000+ customer transactions | Revenue insights, segmentation & interactive dashboard | Python · SQL · Power BI
 
-[![Python](https://img.shields.io/badge/Python-3.x-blue?style=flat-square&logo=python)](https://python.org)
-[![PowerBI](https://img.shields.io/badge/Power%20BI-Dashboard-yellow?style=flat-square&logo=powerbi)](https://powerbi.microsoft.com)
-[![SQL](https://img.shields.io/badge/SQL-MySQL-blue?style=flat-square&logo=mysql)](https://mysql.com)
+![Customer_behaviour_analysis_Dashboard](https://github.com/user-attachments/assets/72449352-902b-443f-acf9-03b463785fb2)
+
 
 ---
 
